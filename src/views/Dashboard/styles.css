@@ -1,0 +1,15 @@
+.dashboard {
+  @apply flex flex-col items-center h-full w-full overflow-auto px-5 py-10;
+}
+
+.dashboard__title {
+  @apply text-white text-3xl font-bold uppercase mb-6;
+}
+
+.pagination {
+  @apply text-white uppercase font-bold gap-3 flex justify-center;
+}
+
+.pagination a {
+  @apply cursor-pointer;
+}

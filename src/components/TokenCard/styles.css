@@ -1,0 +1,53 @@
+.card {
+  @apply max-w-3xl w-full rounded-lg bg-card py-1 px-3 hover:bg-cardHover flex justify-between items-center cursor-pointer mb-3;
+}
+
+.card--open {
+  @apply max-w-3xl w-full rounded-t-lg py-1 px-3 bg-cardHover flex justify-between items-center cursor-pointer mb-[1px];
+}
+
+.card__content {
+  @apply flex items-center flex-1;
+}
+
+.card__content--secondary {
+  @apply flex items-center justify-end;
+}
+
+.card__icon {
+  @apply w-6 md:w-8 lg:w-10 mr-2 md:mr-4 lg:mr-6;
+}
+
+.card__section {
+  @apply flex flex-col gap-1;
+}
+
+.card__section--secondary {
+  @apply flex flex-col gap-1 items-end w-20 md:w-24 lg:w-28;
+}
+
+.card__section__product {
+  @apply text-xs md:text-sm lg:text-base uppercase font-bold text-white;
+}
+
+.card__section__name {
+  @apply text-[8px] md:text-xs lg:text-sm text-grey;
+}
+
+.card__section__price {
+  @apply text-xs md:text-sm lg:text-base text-white;
+}
+
+.card__section__pricePercent {
+  @apply text-[8px] md:text-xs lg:text-sm text-green;
+}
+
+.disclosure {
+  @apply min-h-[200px] bg-cardHover rounded-b-lg p-4 md:p-5 lg:p-6 max-w-3xl w-full mb-3;
+  transition: all 0.3s ease;
+}
+
+.disclosure--closed {
+  @apply min-h-0 max-w-3xl w-full;
+  transition: all 0.3s ease;
+}
