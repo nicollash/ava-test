@@ -1,11 +1,5 @@
 import { FC, useState } from "react";
-import {
-  LineChart,
-  Line,
-  ResponsiveContainer,
-  Tooltip,
-  TooltipProps,
-} from "recharts";
+import { LineChart, Line, ResponsiveContainer, Tooltip } from "recharts";
 
 import { IToken } from "types/IToken";
 
@@ -22,12 +16,7 @@ interface ITooltipProps {
   label: string;
 }
 
-const CustomTooltip: FC<ITooltipProps> = ({
-  payload,
-  active,
-  minValue,
-  label,
-}) => {
+const CustomTooltip: FC<ITooltipProps> = ({ payload, active, minValue }) => {
   if (!active) {
     return null;
   }

@@ -11,7 +11,7 @@ const Dashboard: FC = () => {
   const { data } = useQuery(["fetch_token", page, PER_PAGE], API.fetchTokens);
 
   const handleShowPrevPage = () => {
-    if (page > 0) {
+    if (page > 1) {
       setPage(page - 1);
     }
   };
@@ -24,9 +24,9 @@ const Dashboard: FC = () => {
       <h1 className="dashboard__title">Nicollas Test</h1>
       {data && data.map((token) => <TokenCard token={token} key={token.id} />)}
       <div className="pagination">
-        <a onClick={handleShowPrevPage}>PREV</a>
+        <button onClick={handleShowPrevPage}>PREV</button>
         <span>PAGE: {page}</span>
-        <a onClick={handleShowNextPage}>NEXT</a>
+        <button onClick={handleShowNextPage}>NEXT</button>
       </div>
     </div>
   );
