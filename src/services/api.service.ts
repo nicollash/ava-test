@@ -13,7 +13,6 @@ const API = {
       const data = await response.json();
       return data as Promise<IToken[]>;
     } catch (err) {
-      console.log("fetch api error: ", err);
       return null;
     }
   },
